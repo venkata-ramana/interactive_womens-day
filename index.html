@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="vendor/style.css">
+</head>
+
+<body>
+   <section id="init-section">
+      <div class="init-section-header">
+         <h1 class="header-title">Hey there?</h1>
+         <h1 class="header-title">What do you <strong>THINK!</strong></h1>
+         <h5 class="header-body">In the present times, how do you percieve women around you?</h6>
+      </div>
+
+      <div class="women-face" id="women-face">
+         <div class="pops">
+            <div id="face" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+         </div>
+      </div>
+
+      <div class="actions">
+         <h6>Please <strong>DRAG & DROP</strong> the below options on the face and see what she says.</h6>
+         <div id="mouths" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span class="mouth" id="mouth-1">
+               <img class="smile" id="smile-1" src="vendor/images/smiley/smile1.png" draggable="true"
+                  ondragstart="drag(event)" />
+            </span>
+            <span class="mouth" id="mouth-2">
+               <img class="smile" id="smile-2" src="vendor/images/smiley/smile2.png" draggable="true"
+                  ondragstart="drag(event)" />
+            </span>
+            <span class="mouth" id="mouth-3">
+               <img class="smile" id="smile-3" src="vendor/images/smiley/smile3.png" draggable="true"
+                  ondragstart="drag(event)" />
+            </span>
+         </div>
+      </div>
+   </section>
+   <script src="vendor/script.js"></script>
+</body>
+
+</html>
