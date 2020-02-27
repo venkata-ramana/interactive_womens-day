@@ -18,13 +18,13 @@ section {
 h1 {
     margin: 0;
     font-size: 34px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h5 {
     margin: 0;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h6 {
@@ -57,6 +57,12 @@ strong {
      margin: 6% 0px;
  }
 
+ .empowered-women-face {
+     margin: auto;
+     width: 500px;
+     position: relative;
+ }
+
  /* -- end of init section styles -- */
 
  #face {
@@ -66,6 +72,16 @@ strong {
     width: 400px;
     top: 60px;
     left: 80px;
+ }
+
+ .face-with-icons {
+    background: url('images/girl faces/girl face.png') 250px 250px;
+    background-position: center;
+    height: 400px;
+    width: 400px;
+    top: 120px;
+    position: relative;
+    margin: auto;
  }
 
  #face .smile {
@@ -92,3 +108,116 @@ strong {
     height: 100%;
     width: 100%;
  }
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+ }
+
+ul li{
+    width:150px;
+    color: #000;
+    position: relative;
+    float: left;
+    text-align: left;
+  }
+
+  ul li:first-child {
+      width: 280px;
+  }
+  
+  ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  ul li label{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    top: 22px;
+    left: 40px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+  }
+  
+  ul li:hover label{
+      color: #000;
+  }
+  
+  ul li .check{
+    display: block;
+    position: absolute;
+    border: 3px solid #AAAAAA;
+    border-radius: 100%;
+    height: 16px;
+    width: 16px;
+    top: 20px;
+    left: 10px;
+      z-index: 5;
+      transition: border .25s linear;
+  }
+  
+  ul li:hover .check {
+    border: 3px solid #000;
+  }
+  
+  ul li .check::before {
+    display: block;
+    position: absolute;
+      content: '';
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 4px;
+    left: 4px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+  }
+  
+  input[type=radio]:checked ~ .check {
+    border: 3px solid #000;
+  }
+  
+  input[type=radio]:checked ~ .check::before{
+    background: #000;
+  }
+  
+  input[type=radio]:checked ~ label{
+    color: #000;
+  }
+
+  .action-options {
+      position: relative;
+      left:30%;
+  }
+
+  .icons {
+      position: absolute;
+  }
+
+  .icons .icon {
+    position: relative;
+    top: -15px;
+    left: -50px;
+  }
+
+  .icons .icon:first-child {
+    top: 30px;
+    left: -20px;
+  }
+
+  .icons .icon:last-child {
+    top: -160px;
+    left: 195px;
+    right: 0px;
+  }
+
+  .icon-actions {
+    position: relative;
+    top: 160px;
+  }
