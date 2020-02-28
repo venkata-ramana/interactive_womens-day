@@ -29,10 +29,8 @@ function onDrop() {
    document.getElementById('happiness-metric').style.display = 'none';
 }
 
-
 function init () {
    document.getElementById('pledge-for-child-education').style.display = 'none';
 }
-
 
 init()
