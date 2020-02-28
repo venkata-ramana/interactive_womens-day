@@ -5,20 +5,20 @@ body {
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
-    overflow: hidden;
+    /* overflow: hidden; */
  }
 
 section {
     text-align: center;
     display: block;
     margin: 4% auto;
-    width: 60%;
+    width: 50%;
 }
 
 h1 {
     margin: 0;
-    font-size: 36px;
-    font-weight: 300;
+    font-size: 44px;
+    font-weight: 200;
 }
 
 h5 {
@@ -29,8 +29,8 @@ h5 {
 
 h6 {
     margin: 0;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 1;
 }
 
@@ -47,6 +47,11 @@ strong {
  .header-body {
      margin-top: 18px;
      color: #534D4C;
+ }
+
+.init-section-header {
+  width: 70%;
+  margin: 0 auto;
  }
 
  .header-title {
@@ -220,4 +225,13 @@ ul li{
   .icon-actions {
     position: relative;
     top: 160px;
+  }
+
+  .page-hidden {
+    opacity: 0;
+  }
+
+  .page-visible {
+    opacity: 1;
+    transition: opacity 5s linear;
   }

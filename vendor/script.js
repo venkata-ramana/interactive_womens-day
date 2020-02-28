@@ -25,4 +25,14 @@ function onDrop() {
    document.getElementById('women-face').style.background = "url('vendor/images/pops.jpg')";
    document.getElementById('women-face').style.backgroundRepeat = "no-repeat";
    document.getElementById('women-face').style.backgroundPosition = "center";
+   document.getElementById('big-smile-section').classList.add("page-visible");
+   document.getElementById('happiness-metric').style.display = 'none';
 }
+
+
+function init () {
+   document.getElementById('pledge-for-child-education').style.display = 'none';
+}
+
+
+init()
