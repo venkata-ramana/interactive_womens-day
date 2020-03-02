@@ -226,9 +226,9 @@ ul li{
     top: 160px;
   }
 
-  .page-hidden {
+  /* .page-hidden {
     opacity: 0;
-  }
+  } */
 
   .page-visible {
     opacity: 1;

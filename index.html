@@ -7,7 +7,7 @@
 </head>
 
 <body>
-   <section id="happiness-metric" >
+   <section id="happiness-metric">
       <div class="init-section-header">
          <h1 class="header-title">Hey there?</h1>
          <h1 class="header-title">What do you <strong>THINK!</strong></h1>
@@ -16,25 +16,22 @@
 
       <div class="women-face" id="women-face">
          <div class="pops">
-            <div id="face" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="face">
             </div>
          </div>
       </div>
 
       <div class="actions">
          <h6>Please <strong>DRAG & DROP</strong> the below options on the face and see what she says.</h6>
-         <div id="mouths" ondrop="drop(event)" ondragover="allowDrop(event)">
+         <div id="mouths">
             <span class="mouth" id="mouth-1">
-               <img class="smile" id="smile-1" src="vendor/images/smiley/smile1.png" draggable="true"
-                  ondragstart="drag(event)" />
+               <img class="smile" id="smile1" src="vendor/images/smiley/smile1.png" draggable="true" />
             </span>
             <span class="mouth" id="mouth-2">
-               <img class="smile" id="smile-2" src="vendor/images/smiley/smile2.png" draggable="true"
-                  ondragstart="drag(event)" />
+               <img class="smile" id="smile2" src="vendor/images/smiley/smile2.png" draggable="true" />
             </span>
             <span class="mouth" id="mouth-3">
-               <img class="smile" id="smile-3" src="vendor/images/smiley/smile3.png" draggable="true"
-                  ondragstart="drag(event)" />
+               <img class="smile" id="smile3" src="vendor/images/smiley/smile3.png" draggable="true" />
             </span>
          </div>
       </div>
@@ -50,51 +47,52 @@
    </section> -->
 
    <section class="page-hidden" id="big-smile-section">
-      <div class="init-section-header">
+      <div class="init-section-header" id ="init-section-header">
          <h1 class="header-title">Thank You!</h1>
          <h1 class="header-title">for making me smile.</h1>
-         <h5 class="header-body" ><strong>"YOU"</strong> have the power to spread smiles to many women out there that need
+         <h5 class="header-body"><strong>"YOU"</strong> have the power to spread smiles to many women out there that
+            need
             you. Below are a few challenges yet to be resolved...</h6>
       </div>
 
-      <div class="empowered-women-face">
+      <div class="empowered-women-face" id="empowered-women-face">
          <div class="icons">
-            <img class="icon" src="vendor/images/icons/educationicon.png" width="180px" height="180px"/>
-            <img class="icon" src="vendor/images/icons/stereotype.png" width="200px" height="200px"/>
-            <img class="icon" src="vendor/images/icons/safetyicon.png" width="210px" height="210px"/>
+            <img class="icon" src="vendor/images/icons/educationicon.png" width="180px" height="180px" />
+            <img class="icon" src="vendor/images/icons/stereotype.png" width="200px" height="200px" />
+            <img class="icon" src="vendor/images/icons/safetyicon.png" width="210px" height="210px" />
          </div>
 
-            <div class="face-with-icons">
+         <div class="face-with-icons">
          </div>
       </div>
 
-      <div class="icon-actions">
+      <div class="icon-actions" id="icon-actions">
          <h5>As a TW'er, what initiative would you be taking from below?</h6>
-         <div class="action-options">
-            <ul>
-               <li>
-                  <input type="radio" id="f-option" name="selector">
-                  <label for="f-option">Contribute to girl child education</label>
-                  <div class="check"></div>
-               </li>
+            <div class="action-options">
+               <ul>
+                  <li>
+                     <input type="radio" id="f-option" name="selector">
+                     <label for="f-option">Contribute to girl child education</label>
+                     <div class="check"></div>
+                  </li>
 
-               <li>
-                  <input type="radio" id="s-option" name="selector">
-                  <label for="s-option">Safety</label>
-                  <div class="check">
-                     <div class="inside"></div>
-                  </div>
-               </li>
+                  <li>
+                     <input type="radio" id="s-option" name="selector">
+                     <label for="s-option">Safety</label>
+                     <div class="check">
+                        <div class="inside"></div>
+                     </div>
+                  </li>
 
-               <li>
-                  <input type="radio" id="t-option" name="selector">
-                  <label for="t-option">Watch before I talk</label>
-                  <div class="check">
-                     <div class="inside"></div>
-                  </div>
-               </li>
-            </ul>
-         </div>
+                  <li>
+                     <input type="radio" id="t-option" name="selector">
+                     <label for="t-option">Watch before I talk</label>
+                     <div class="check">
+                        <div class="inside"></div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
       </div>
    </section>
 
@@ -103,6 +101,7 @@
       <h1>I pledge to contribute y support for Girl Child Education.</h1>
       <img src="vendor/images/girl faces/gril_edcation.png">
    </section>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="vendor/script.js"></script>
 </body>
 

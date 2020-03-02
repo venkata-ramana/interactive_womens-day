@@ -1,40 +1,59 @@
-function allowDrop(allowdropevent) {
-   allowdropevent.preventDefault();
-}
+$(document).ready(function () {
+   var selectedSmileyId = 0;
+   var selectedSmileyParentId = 0;
 
-function drag(dragevent) {
-   dragevent.dataTransfer.setData("smiley", dragevent.target.id);
-   dragevent.dataTransfer.setData("smileyParent", document.getElementById(dragevent.target.id).parentNode.id);
-}
+   var hidePages = function (event) {
+      // document.getElementById('big-smile-section').classList.add("page-visible");
+      $('#happiness-metric').hide();
+      $('#big-smile-section').show();
 
-function drop(dropevent) {
-   dropevent.preventDefault();
-   var smileyElement = document.getElementById(dropevent.dataTransfer.getData("smiley"));
-   var parentElement = document.getElementById(dropevent.dataTransfer.getData("smileyParent"));
-   var clonedElement = smileyElement.cloneNode(true);
-   clonedElement.id = smileyElement.id.concat('-cloned');
-   dropevent.target.appendChild(smileyElement);
-   parentElement.appendChild(clonedElement);
-   onDrop();
-}
+      // big smile page
+      $('#empowered-women-face').hide();
+      $('#icon-actions').hide();
 
-function onDrop() {
-   document.getElementById('smile-1').draggable = false;
-   document.getElementById('smile-2').draggable = false;
-   document.getElementById('smile-3').draggable = false;
-   document.getElementById('women-face').style.background = "url('vendor/images/pops.jpg')";
-   document.getElementById('women-face').style.backgroundRepeat = "no-repeat";
-   document.getElementById('women-face').style.backgroundPosition = "center";
-   setTimeout(function(){ hidePages(); }, 1000);
-}
+      setTimeout(() => {
+      }, 300);
 
-function hidePages() {
-   document.getElementById('big-smile-section').classList.add("page-visible");
-   document.getElementById('happiness-metric').style.display = 'none';
-}
+      $('#init-section-header').animate();
+   }
 
-function init () {
-   document.getElementById('pledge-for-child-education').style.display = 'none';
-}
+   onDrop = function (event) {
+      event.preventDefault();
+      var smileyElement = document.getElementById(selectedSmileyId);
+      var parentElement = document.getElementById(selectedSmileyParentId);
+      var clonedElement = smileyElement.cloneNode(true);
+      clonedElement.id = smileyElement.id.concat('-cloned');
+      event.target.appendChild(smileyElement);
+      parentElement.appendChild(clonedElement);
+      document.getElementById('smile1').draggable = false;
+      document.getElementById('smile2').draggable = false;
+      document.getElementById('smile3').draggable = false;
+      document.getElementById('women-face').style.background = "url('vendor/images/pops.jpg')";
+      document.getElementById('women-face').style.backgroundRepeat = "no-repeat";
+      document.getElementById('women-face').style.backgroundPosition = "center";
+      setTimeout(function () { hidePages(); }, 800);
+   };
 
-init()
+   $("#face")
+      .on("dragover", () => {
+         event.preventDefault();
+      })
+      .on("drop", onDrop);
+
+   $("#smile2")
+      .on("dragenter", (event) => {
+         event.preventDefault();
+         selectedSmileyId = event.originalEvent.target.id;
+         selectedSmileyParentId = document.getElementById(event.originalEvent.target.id).parentNode.id;
+      })
+      .on("dragover", () => {
+         event.preventDefault();
+      });
+
+   var init = function (event) {
+      $('#pledge-for-child-education').hide();
+      $('#big-smile-section').hide();
+   }
+
+   init();
+});
