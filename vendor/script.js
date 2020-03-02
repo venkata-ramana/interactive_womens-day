@@ -25,6 +25,10 @@ function onDrop() {
    document.getElementById('women-face').style.background = "url('vendor/images/pops.jpg')";
    document.getElementById('women-face').style.backgroundRepeat = "no-repeat";
    document.getElementById('women-face').style.backgroundPosition = "center";
+   setTimeout(function(){ hidePages(); }, 1000);
+}
+
+function hidePages() {
    document.getElementById('big-smile-section').classList.add("page-visible");
    document.getElementById('happiness-metric').style.display = 'none';
 }
